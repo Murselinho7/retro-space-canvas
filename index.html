@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070714" />
+    <title>Retro Space Canvas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <h1>Retro Space</h1>
+      </div>
+      <dl class="hud">
+        <div>
+          <dt>Score</dt>
+          <dd id="score">000000</dd>
+        </div>
+        <div>
+          <dt>Wave</dt>
+          <dd id="wave">1</dd>
+        </div>
+        <div>
+          <dt>Lives</dt>
+          <dd id="lives">▲ ▲ ▲</dd>
+        </div>
+        <div>
+          <dt>Best</dt>
+          <dd id="best">000000</dd>
+        </div>
+      </dl>
+      <button id="mute" type="button" aria-pressed="false">Sound on</button>
+    </header>
+
+    <div id="stage" class="stage">
+      <canvas id="game" aria-label="Space shooter playfield"></canvas>
+      <div class="zones" aria-hidden="true">
+        <span>◀</span>
+        <span>▶</span>
+      </div>
+      <p id="paused" class="paused" hidden>Paused</p>
+      <div id="overlay" class="overlay">
+        <p class="eyebrow">Neon arcade</p>
+        <h2 id="overlay-title">Retro Space</h2>
+        <p id="overlay-text"></p>
+        <button id="action" type="button">Start</button>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
